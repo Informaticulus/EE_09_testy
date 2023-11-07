@@ -1,0 +1,8 @@
+1
+SELECT imie, nazwisko, adres, miasto, czyRODO, czyBadania FROM pracownicy WHERE id=2;
+2
+SELECT count(*) FROM pracownicy;
+3
+SELECT id, imie, nazwisko FROM pracownicy WHERE id=2;
+4
+SELECT pracownicy.id, nazwa, opis FROM pracownicy INNER JOIN stanowiska ON stanowiska.id=pracownicy.stanowiska_id where pracownicy.id=2;

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Działania matematyczne</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+<section id="baner1">
+    <img src="logo.jpg" alt="matematyka">
+</section>
+<section id="baner2">
+    <h1>Pomocnik matematyczny</h1>
+</section>
+<section id="baner3">
+    <a href="dzialania.html"><h4>Działania</h4></a>
+</section>
+<section id="baner4">
+    <a href="mnozenie.html"><h4>Tabliczka mnożenia</h4></a>
+</section>
+<section id="lewy">
+    <h3>Proste działania</h3>
+    liczba A: <input type="text" name="" id="A"><br>
+    liczba B: <input type="text" name="" id="B"><br>
+    <button id="" onclick="dodaj();">+</button><button id="" onclick="odejmij();">-</button><button id="" onclick="mnoz();">*</button><button id="" onclick="dziel();">/</button><button id="" onclick="poteguj();">A^B</button><br>
+    <div id="wynik">Wynik:</div>
+</section>
+<section id="prawy">
+<ul>
+    <li>dodawanie</li>
+    <li>odejmowanie</li>
+    <li>mnożenie</li>
+    <li>dzielenie</li>
+    <li>potęgowanie</li>
+</ul>
+</section>  
+<section id="stopka">
+    <p>Autor: 00000000000</p>
+</section>    
+</body>
+<script>
+function dodaj(){
+    let A=parseInt(document.getElementById("A").value);
+    let B=parseInt(document.getElementById("B").value);
+    document.getElementById("wynik").innerHTML=`Wynik: ${A+B}`;
+}    
+function odejmij(){
+    let A=parseInt(document.getElementById("A").value);
+    let B=parseInt(document.getElementById("B").value);
+    document.getElementById("wynik").innerHTML=`Wynik: ${A-B}`;
+}
+function mnoz(){
+    let A=parseInt(document.getElementById("A").value);
+    let B=parseInt(document.getElementById("B").value);
+    document.getElementById("wynik").innerHTML=`Wynik: ${A*B}`;
+}
+function dziel(){
+    let A=parseInt(document.getElementById("A").value);
+    let B=parseInt(document.getElementById("B").value);
+    document.getElementById("wynik").innerHTML=`Wynik: ${A/B}`;
+}
+function poteguj(){
+    let A=parseInt(document.getElementById("A").value);
+    let B=parseInt(document.getElementById("B").value);
+    document.getElementById("wynik").innerHTML=`Wynik: ${Math.pow(A,B)}`;
+}
+</script>
+</html>
