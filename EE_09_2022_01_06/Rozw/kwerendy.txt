@@ -1,0 +1,9 @@
+1
+CREATE USER 'Agnieszka'@localhost identified by 'haslo4';
+SELECT * FROM mysql.user; [phpmyadmin, konsola]
+2
+SELECT avg(rocznik) as rocznik from samochody WHERE marka="opel";
+3
+SELECT marka, imie from samochody INNER join wypozyczenia on samochody.id=wypozyczenia.samochody_id inner join klienci on wypozyczenia.klienci_id=klienci.id;
+4
+ALTER TABLE klasa DROP COLUMN cena;

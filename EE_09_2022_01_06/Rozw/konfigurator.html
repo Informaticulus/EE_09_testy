@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style w JavaScript</title>
+    <link rel="stylesheet" href="styl6.css">
+</head>
+
+<body>
+    <section id="lewy">
+        <h1>Konfigurator stylu</h1>
+        <p>Podaj kolor tła</p>
+        <button id="b1" value="indigo" onclick="kolorTla(this.value);">Indigo</button>
+        <button id="b2" value="steelblue" onclick="kolorTla(this.value);">SteelBlue</button>
+        <button id="b3" value="olive" onclick="kolorTla(this.value);">Olive</button><br>
+        <p>Poda kolor czcionki</p>
+        <select name="" id="" onclick="kolorFontu(this.value)">
+            <option value="White">White</option>
+            <option value="Tan">Tan</option>
+            <option value="Bisque">Bisque</option>
+            <option value="Plum">Plum</option>
+        </select><br>
+        <p>Pod rozmiar czcionki w procentach, np. 200%</p>
+        <input type="text" name="" placeholder="100%" id="" onchange="wielkoscFontu(this.value);"><br>
+        <p>Czy rysunek ma mieć ramke?</p>
+        <input type="checkbox" checked="checked" name="" id="checkbox" onclick="ramka();"> Rysuj ramkę<br>
+        <p>Jaki jest typ punktora listy?</p>
+        <input type="radio" value="disc" checked="checked" name="punktor" id=""
+            onchange="pokazRadio(this.value);">dysk<br>
+        <input type="radio" value="square" name="punktor" id="" onchange="pokazRadio(this.value);">kwadrat<br>
+        <input type="radio" value="circle" name="punktor" id="" onchange="pokazRadio(this.value);">okrąg<br>
+    </section>
+    <section id="prawy">
+        <img src="gibraltar.jpg" alt="półwysep Gibraltar">
+        <ul>
+            <li>element 1</li>
+            <li>element 2</li>
+            <li>element 3</li>
+        </ul>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum. </p>
+    </section>
+    <section id="stopka">
+        Autor: 00000000000
+    </section>
+</body>
+<script>
+    function kolorTla(val) {
+        document.getElementById("prawy").style.background = `${val}`;
+    }
+    function kolorFontu(val) {
+        document.getElementById("prawy").style.color = `${val}`;
+    }
+    function wielkoscFontu(val) {
+        document.getElementById("prawy").style.fontSize = `${val}`;
+    }
+    function ramka(val) {
+        if (document.getElementById("checkbox").checked) {
+            document.getElementsByTagName("img")[0].style.border = "solid";
+        }
+        else {
+            console.log("#");
+            document.getElementsByTagName("img")[0].style.border = "none";
+        }
+    }
+    function pokazRadio(val) {
+        document.getElementsByTagName("ul")[0].style.listStyleType = `${val}`;
+    }
+</script>
+
+</html>
